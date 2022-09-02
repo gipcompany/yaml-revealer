@@ -5,7 +5,7 @@
 " URL: https://github.com/gipcompany/yaml-revealer
 
 " Global variables
-let g:yaml_revealer_separator = get(g:, 'yaml_revealer_separator', '>')
+let g:yaml_revealer_separator = get(g:, 'yaml_revealer_separator', ' > ')
 let g:yaml_revealer_list_indicator = get(g:, 'yaml_revealer_list_indicator', 1)
 
 function! TrimList(l)
@@ -112,7 +112,7 @@ function! GetAncestors(line)
   let key = matchstr(getline(lastKeyLine), '\s*[\-]\?\s*\zs.\+\ze:').isList
 
   if(indent(lastKeyLine) > 0)
-    return GetAncestors(lastKeyLine).' '.g:yaml_revealer_separator.' '.key
+    return GetAncestors(lastKeyLine).''.g:yaml_revealer_separator.''.key
   endif
 
   return key
