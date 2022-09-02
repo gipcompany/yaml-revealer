@@ -1,8 +1,8 @@
 " Reveals the full tree structure of a Yaml key
 " and allows to find a Yaml key
 "
-" Maintainer: Einenlum
-" URL: https://github.com/Einenlum/yaml-revealer
+" Maintainer: gipcompany
+" URL: https://github.com/gipcompany/yaml-revealer
 
 " Global variables
 let g:yaml_revealer_separator = get(g:, 'yaml_revealer_separator', '>')
